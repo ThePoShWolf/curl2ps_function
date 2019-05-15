@@ -21,8 +21,6 @@ else {
     $body = "Please pass a curl command on the query string or in the request body."
 }
 
-Wait-Debugger
-
 # Associate values to output bindings by calling 'Push-OutputBinding'.
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
     StatusCode = $status
