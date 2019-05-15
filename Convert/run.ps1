@@ -7,18 +7,31 @@ param($Request, $TriggerMetadata)
 Write-Host "PowerShell HTTP trigger function processed a request."
 
 # Interact with query parameters or the body of the request.
-$curlCommand = $Request.Query.CurlCommand
-if (-not $curlCommand) {
+
+if ($Request.Query.CurlCommand) {
+    $curlCommand = $Request.Query.CurlCommand
+    switch($Request.Query.String){
+        'true' {$string = $true}
+        default {$string = $false}
+    }
+} elseif ($Request.Body.CurlCommand) {
     $curlCommand = $Request.Body.CurlCommand
+    switch($Request.Body.String){
+        'true' {$string = $true}
+        default {$string = $false}
+    }
+} else {
+    $status = [HttpStatusCode]::BadRequest
+    $body = "Missing CurlCommand parameter in body or query."
 }
 
 if ($curlCommand) {
     $status = [HttpStatusCode]::OK
-    $body = ConvertTo-IRM -CurlCommand $curlCommand -String
-}
-else {
-    $status = [HttpStatusCode]::BadRequest
-    $body = "Please pass a curl command on the query string or in the request body."
+    $params = @{
+        CurlCommand = $curlCommand
+        String = $string
+    }
+    $body = ConvertTo-IRM @params
 }
 
 # Associate values to output bindings by calling 'Push-OutputBinding'.
