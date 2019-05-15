@@ -31,7 +31,10 @@ if ($curlCommand) {
         CurlCommand = $curlCommand
         String = $string
     }
-    $body = ConvertTo-IRM @params
+    $body = [pscustomobject]@{
+        Converted = ConvertTo-IRM @params
+        Version = (Get-Module Curl2PS).Version.ToString()
+    }
 }
 
 # Associate values to output bindings by calling 'Push-OutputBinding'.
