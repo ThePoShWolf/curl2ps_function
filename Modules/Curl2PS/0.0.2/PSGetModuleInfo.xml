@@ -1,0 +1,122 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Curl2PS</S>
+      <S N="Version">0.0.2</S>
+      <S N="Type">Module</S>
+      <S N="Description">A utility to help convert curl commands to Invoke-RestMethod syntax</S>
+      <S N="Author">Anthony Howell</S>
+      <S N="CompanyName">ThePoShWolf</S>
+      <S N="Copyright">(c) 2019 Anthony Howell. All rights reserved.</S>
+      <DT N="PublishedDate">2019-05-08T18:48:10-07:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/ThePoShWolf/Curl2PS</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>ConvertTo-IRM</S>
+                <S>Get-CurlCommand</S>
+                <S>Get-URLData</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>ConvertTo-IRM</S>
+                <S>Get-CurlCommand</S>
+                <S>Get-URLData</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2/</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2019 Anthony Howell. All rights reserved.</S>
+          <S N="description">A utility to help convert curl commands to Invoke-RestMethod syntax</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">10</S>
+          <S N="downloadCount">12</S>
+          <S N="packageSize">7179</S>
+          <S N="published">5/8/2019 6:48:10 PM -07:00</S>
+          <S N="created">5/8/2019 6:48:10 PM -07:00</S>
+          <S N="lastUpdated">5/15/2019 11:49:07 AM -07:00</S>
+          <S N="tags">PSModule PSFunction_ConvertTo-IRM PSCommand_ConvertTo-IRM PSFunction_Get-CurlCommand PSCommand_Get-CurlCommand PSFunction_Get-URLData PSCommand_Get-URLData PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-05-15T11:49:07Z</S>
+          <S N="NormalizedVersion">0.0.2</S>
+          <S N="Authors">Anthony Howell</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Curl2PS.nuspec|Curl2PS.psd1|Curl2PS.psm1|EN-US\Curl2PS-help.xml</S>
+          <S N="GUID">c54d90ec-2d24-4763-8c65-de450e8503e1</S>
+          <S N="CompanyName">Community</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\users\Anthony\Azure\Curl2PS_Function\Modules\Curl2PS\0.0.2</S>
+    </MS>
+  </Obj>
+</Objs>
